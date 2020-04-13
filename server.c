@@ -1,13 +1,9 @@
+#include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
-#include <arpa/inet.h>
-#include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <errno.h>
-#include <string.h>
-#include <sys/types.h>
-#include <time.h>
+#include <stdio.h>
 #include <string.h>
 
 int main(int argc, char *argv[]) {
@@ -17,7 +13,6 @@ int main(int argc, char *argv[]) {
 
     char sendBuff[1024];
     char recvBuff[1024];
-    time_t ticks;
 
     listenfd = socket(AF_INET, SOCK_STREAM, 0);
     memset(&serv_addr, '0', sizeof(serv_addr));
